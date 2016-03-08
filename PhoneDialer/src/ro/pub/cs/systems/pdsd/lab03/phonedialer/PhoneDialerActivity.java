@@ -19,13 +19,17 @@ public class PhoneDialerActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_phone_dialer);
-		
+		int ids[]={R.id.button1,R.id.button2,R.id.button3,
+				R.id.button4,R.id.button5,R.id.button6,
+				R.id.button7,R.id.button8,R.id.button9,
+				R.id.button10,R.id.button11,R.id.button12
+		};
 		ImageButton call = (ImageButton) findViewById(R.id.button13);
 		ImageButton end_call = (ImageButton) findViewById(R.id.button14);
 		ImageButton delete = (ImageButton) findViewById(R.id.button0);
 		final EditText show_text = (EditText)findViewById(R.id.editText1);
-		for (int i = 1; i <= 12; i++) {
-			Button number = (Button) findViewById(i);
+		for (int i =0; i < 12; i++) {
+			Button number = (Button) findViewById(ids[i]);
 			number.setOnClickListener(new OnClickListener() {
 				@Override
 				public void onClick(View view) {
